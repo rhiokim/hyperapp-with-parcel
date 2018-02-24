@@ -24,3 +24,6 @@ v8.log
 # flowtype
 flow-typed/npm
 
+# parcel.js
+.cache
+
