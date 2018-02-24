@@ -5,6 +5,7 @@ import debounce from 'debounce-promise'
  * FIXME: high bundle size and time
  */
 import 'babel-polyfill'
+import '../styles/main.sass'
 
 const getUserDataFn = username => {
   return fetch(`https://api.github.com/users/${username}`)
@@ -40,9 +41,9 @@ const view = (state, actions) =>
     <div className='userCard'>
       {state.userData ? (
         <div>
-          <img class='userCard__img' src={state.userData.avatar_url} />
-          <div class='userCard__name'>{state.userData.name}</div>
-          <div class='userCard__location'>{state.userData.location}</div>
+          <img className='userCard__img' src={state.userData.avatar_url} />
+          <div className='userCard__name'>{state.userData.name}</div>
+          <div className='userCard__location'>{state.userData.location}</div>
         </div>
       ) : (
         <div>👆 search 'em</div>
